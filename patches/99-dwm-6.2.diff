@@ -20,6 +20,15 @@ index 91b3320..8106db6 100644
  static const char *fonts[]          = { "monospace:size=10" };
  static const char dmenufont[]       = "monospace:size=10";
  static char normbgcolor[]           = "#222222";
+@@ -42,6 +42,8 @@
+ 	{ "Gimp",    NULL,     NULL,           0,         1,          0,           0,        -1 },
+ 	{ "Firefox", NULL,     NULL,           1 << 8,    0,          0,          -1,        -1 },
+ 	{ "St",      NULL,     NULL,           0,         0,          1,           0,        -1 },
++	{ "kitty",   NULL,     NULL,           0,         0,          1,           0,        -1 },
++	{ "spotify", NULL,     NULL,           0,         0,          0,           0,        -1 },
+ 	{ NULL,      NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
+ };
+
 @@ -70,7 +73,8 @@
  };
  
