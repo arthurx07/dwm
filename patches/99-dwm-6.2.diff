@@ -128,3 +128,16 @@ index 91b3320..8106db6 100644
  };
  
  /* button definitions */
+diff --git a/dwm.c b/dwm.c
+index 4465af1..626e073 100644
+--- a/dwm.c
++++ b/dwm.c
+@@ -1864,7 +1864,7 @@
+        wa.cursor = cursor[CurNormal]->cursor;
+        wa.event_mask = SubstructureRedirectMask|SubstructureNotifyMask
+                |ButtonPressMask|PointerMotionMask|EnterWindowMask
+-               |LeaveWindowMask|StructureNotifyMask|PropertyChangeMask;
++               |LeaveWindowMask|StructureNotifyMask|PropertyChangeMask|KeyPressMask;
+        XChangeWindowAttributes(dpy, root, CWEventMask|CWCursor, &wa);
+        XSelectInput(dpy, root, wa.event_mask);
+        grabkeys();
