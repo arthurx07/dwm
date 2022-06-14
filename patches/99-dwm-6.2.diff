@@ -20,15 +20,19 @@ index 91b3320..8106db6 100644
  static const char *fonts[]          = { "monospace:size=10" };
  static const char dmenufont[]       = "monospace:size=10";
  static char normbgcolor[]           = "#222222";
-@@ -42,6 +42,8 @@
+@@ -37,8 +37,10 @@
+ 	*/
+ 	/* class     instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
  	{ "Gimp",    NULL,     NULL,           0,         1,          0,           0,        -1 },
- 	{ "Firefox", NULL,     NULL,           1 << 8,    0,          0,          -1,        -1 },
- 	{ "St",      NULL,     NULL,           0,         0,          1,           0,        -1 },
+-	{ "Firefox", NULL,     NULL,           1 << 8,    0,          0,          -1,        -1 },
+-	{ "St",      NULL,     NULL,           0,         0,          1,           0,        -1 },
++	{ "firefox", NULL,     NULL,           1 << 8,    0,          0,          -1,        -1 },
++	{ "st-256color",       NULL,     NULL,            0,          0,           1,           0,        -1 },
 +	{ "kitty",   NULL,     NULL,           0,         0,          1,           0,        -1 },
-+	{ "spotify", NULL,     NULL,           0,         0,          0,           0,        -1 },
++	{ "Spotify", NULL,     NULL,           0,         0,          0,           0,         1 }, /* 0 -> primary monitor, 1 -> secondary monitor, -1 -> focused monitor */
  	{ NULL,      NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
  };
-
+ 
 @@ -70,7 +73,8 @@
  };
  
@@ -133,11 +137,11 @@ index 4465af1..626e073 100644
 --- a/dwm.c
 +++ b/dwm.c
 @@ -1864,7 +1864,7 @@
-        wa.cursor = cursor[CurNormal]->cursor;
-        wa.event_mask = SubstructureRedirectMask|SubstructureNotifyMask
-                |ButtonPressMask|PointerMotionMask|EnterWindowMask
--               |LeaveWindowMask|StructureNotifyMask|PropertyChangeMask;
-+               |LeaveWindowMask|StructureNotifyMask|PropertyChangeMask|KeyPressMask;
-        XChangeWindowAttributes(dpy, root, CWEventMask|CWCursor, &wa);
-        XSelectInput(dpy, root, wa.event_mask);
-        grabkeys();
+ 	wa.cursor = cursor[CurNormal]->cursor;
+ 	wa.event_mask = SubstructureRedirectMask|SubstructureNotifyMask
+ 		|ButtonPressMask|PointerMotionMask|EnterWindowMask
+-		|LeaveWindowMask|StructureNotifyMask|PropertyChangeMask;
++		|LeaveWindowMask|StructureNotifyMask|PropertyChangeMask|KeyPressMask;
+ 	XChangeWindowAttributes(dpy, root, CWEventMask|CWCursor, &wa);
+ 	XSelectInput(dpy, root, wa.event_mask);
+ 	grabkeys();
