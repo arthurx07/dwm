@@ -56,7 +56,7 @@ index 91b3320..8106db6 100644
 +static const char *upvol1[] = { "/home/kumao/.local/bin/volume", "-i", "1", NULL };
 +static const char *downvol[] = { "/home/kumao/.local/bin/volume", "-d", "5", NULL };
 +static const char *downvol1[] = { "/home/kumao/.local/bin/volume", "-d", "1", NULL };
-+static const char *mutevol[] = { "/home/kumao/.local/bin/muted", NULL };
++static const char *mutevol[] = { "/home/kumao/.local/bin/mute", NULL };
 +
 +static const char *lightup[] = { "/home/kumao/.local/bin/light", "+10%", NULL };
 +static const char *lightdown[] = { "/home/kumao/.local/bin/light", "10%-", NULL };
