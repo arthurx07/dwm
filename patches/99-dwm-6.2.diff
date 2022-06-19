@@ -49,7 +49,7 @@ index 91b3320..8106db6 100644
  static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 -static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbordercolor, "-sf", selfgcolor, NULL };
 -static const char *termcmd[]  = { "st", NULL };
-+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
++static const char *dmenucmd[] = { "dmenu_run", NULL };
 +static const char *termcmd[]  = { "kitty", NULL };
 +
 +static const char *upvol[] = { "/home/kumao/.local/bin/volume", "-i", "5", NULL };
