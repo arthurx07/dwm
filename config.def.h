@@ -8,13 +8,13 @@ static const unsigned int borderpx  = 0;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const unsigned int gappih    = 20;       /* horiz inner gap between windows */
-static const unsigned int gappiv    = 10;       /* vert inner gap between windows */
-static const unsigned int gappoh    = 10;       /* horiz outer gap between windows and screen edge */
+static const unsigned int gappiv    = 20;       /* vert inner gap between windows */
+static const unsigned int gappoh    = 30;       /* horiz outer gap between windows and screen edge */
 static const unsigned int gappov    = 30;       /* vert outer gap between windows and screen edge */
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
-static const int showbar            = 1;        /* 0 means no bar */
+static const int showbar            = 0;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int vertpad            = 10;       /* vertical padding of bar */
+static const int vertpad            = 0;       /* vertical padding of bar */
 static const int sidepad            = 30;       /* horizontal padding of bar */
 static const char *fonts[]          = { "monospace:size=10" };
 static const char dmenufont[]       = "monospace:size=10";
@@ -40,10 +40,11 @@ static const Rule rules[] = {
 	 */
 	/* class     instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
 	{ "Gimp",    NULL,     NULL,           0,         1,          0,           0,        -1 },
-	{ "firefox", NULL,     NULL,           1 << 8,    0,          0,          -1,        -1 },
+	{ "firefox", NULL,     NULL,           0,    	  0,          0,          -1,        -1 },
 	{ "st-256color",       NULL,     NULL,            0,          0,           1,           0,        -1 },
 	{ "kitty",   NULL,     NULL,           0,         0,          1,           0,        -1 },
 	{ "Spotify", NULL,     NULL,           0,         0,          0,           0,         1 }, /* 0 -> primary monitor, 1 -> secondary monitor, -1 -> focused monitor */
+       { NULL,      NULL,     "Trackma",      0,         1,          0,           0,        -1 },
 	{ NULL,      NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
 };
 
@@ -96,14 +97,14 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
+static const char *dmenucmd[] = { "dmenu_run", NULL };
 static const char *termcmd[]  = { "kitty", NULL };
 
 static const char *upvol[] = { "/home/kumao/.local/bin/volume", "-i", "5", NULL };
 static const char *upvol1[] = { "/home/kumao/.local/bin/volume", "-i", "1", NULL };
 static const char *downvol[] = { "/home/kumao/.local/bin/volume", "-d", "5", NULL };
 static const char *downvol1[] = { "/home/kumao/.local/bin/volume", "-d", "1", NULL };
-static const char *mutevol[] = { "/home/kumao/.local/bin/muted", NULL };
+static const char *mutevol[] = { "/home/kumao/.local/bin/mute", NULL };
 
 static const char *lightup[] = { "/home/kumao/.local/bin/light", "+10%", NULL };
 static const char *lightdown[] = { "/home/kumao/.local/bin/light", "10%-", NULL };
