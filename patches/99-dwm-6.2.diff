@@ -28,7 +28,7 @@ index 91b3320..8106db6 100644
 +static const int vertpad            = 5;        /* vertical padding of bar */
 +static const int sidepad            = 30;       /* horizontal padding of bar */
 -static const char *fonts[]          = { "monospace:size=10" };
-+static const char *fonts[]          = { "monospace:size=10","FontAwesome6Free:pixelsize=12:antialias=true:autohint=true", "FontAwesome6FreeSolid:pixelsize=12:antialias=true:autohint=true", "FontAwesome6Brands:pixelsize=12:antialias=true:autohint=true"};
++static const char *fonts[]          = { "monospace:size=10","RobotoMono Nerd Font:style=Regular:pixelsize=12:antialias=true:autohint=true"};
  static const char dmenufont[]       = "monospace:size=10";
  static char normbgcolor[]           = "#222222";
 @@ -37,8 +37,11 @@
