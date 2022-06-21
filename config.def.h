@@ -43,7 +43,7 @@ static const Rule rules[] = {
 	{ "firefox", NULL,     NULL,           0,    	  0,          0,          -1,        -1 },
 	{ "st-256color",       NULL,     NULL,            0,          0,           1,           0,        -1 },
 	{ "kitty",   NULL,     NULL,           0,         0,          1,           0,        -1 },
-	{ "Spotify", NULL,     NULL,           0,         0,          0,           0,         1 }, /* 0 -> primary monitor, 1 -> secondary monitor, -1 -> focused monitor */
+        { "broken",  "broken", NULL,           0,         0,          0,           0,         1 }, /* spotify starts up with no window title, neither class / instance. 0 -> primary monitor, 1 -> secondary monitor, -1 -> focused monitor */
        { NULL,      NULL,     "Trackma",      0,         1,          0,           0,        -1 },
 	{ NULL,      NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
 };
