@@ -41,6 +41,7 @@ index 91b3320..8106db6 100644
 +	{ "kitty",   NULL,     NULL,           0,         0,          1,           0,        -1 },
 +       { "broken",  "broken", NULL,           0,         0,          0,           0,         1 }, /* spotify starts up with no window title, neither class / instance. 0 -> primary monitor, 1 -> secondary monitor, -1 -> focused monitor */
 +       { NULL,      NULL,     "Trackma",      0,         1,          0,           0,        -1 },
++       { "Thunar",  NULL,     NULL,           0,         1,          0,           0,        -1 },
  	{ NULL,      NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
  };
  
