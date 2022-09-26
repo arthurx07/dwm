@@ -97,7 +97,7 @@ index 9fd0286..6c302c3 100644
 +	int i = stackpos(arg);
 +	Client *c, *p;
  
--	if (!selmon->sel)
+-	if (!selmon->sel || (selmon->sel->isfullscreen && lockfullscreen))
 +	if(i < 0)
  		return;
 -	if (arg->i > 0) {
