@@ -26,10 +26,10 @@ diff --git a/dwm.c b/dwm.c
 index a96f33c..d55f186 100644
 --- a/dwm.c
 +++ b/dwm.c
-@@ -1252,7 +1252,24 @@ propertynotify(XEvent *e)
- void
+@@ -1412,7 +1412,24 @@ void
  quit(const Arg *arg)
  {
+ 	if(arg->i) restart = 1;
 -	running = 0;
 +	FILE *fd = NULL;
 +	struct stat filestat;
