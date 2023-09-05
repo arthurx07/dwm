@@ -36,4 +36,4 @@ index a96f33c..f2da729 100644
 -				urg & 1 << i);
  		x += w;
  	}
- 	w = blw = TEXTW(m->ltsymbol);
+ 	w = TEXTW(m->ltsymbol);
