@@ -18,7 +18,7 @@ index a96f33c..a12e0bd 100644
 @@ -62,7 +62,7 @@ enum { CurNormal, CurResize, CurMove, CurLast }; /* cursor */
  enum { SchemeNorm, SchemeSel }; /* color schemes */
  enum { NetSupported, NetWMName, NetWMState, NetWMCheck,
-        NetWMFullscreen, NetActiveWindow, NetWMWindowType,
+        NetWMFullscreen, NetWMSticky, NetActiveWindow, NetWMWindowType,
 -       NetWMWindowTypeDialog, NetClientList, NetLast }; /* EWMH atoms */
 +       NetWMWindowTypeDialog, NetClientList, NetClientInfo, NetLast }; /* EWMH atoms */
  enum { WMProtocols, WMDelete, WMState, WMTakeFocus, WMLast }; /* default atoms */
@@ -31,7 +31,7 @@ index a96f33c..a12e0bd 100644
 +static void setclienttagprop(Client *c);
  static void setfocus(Client *c);
  static void setfullscreen(Client *c, int fullscreen);
- static void setlayout(const Arg *arg);
+ static void setsticky(Client *c, int sticky);
 @@ -1060,6 +1061,26 @@ manage(Window w, XWindowAttributes *wa)
  	updatewindowtype(c);
  	updatesizehints(c);
