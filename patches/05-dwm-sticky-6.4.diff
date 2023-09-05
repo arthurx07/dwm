@@ -44,10 +44,10 @@ index 253aba7..a9157bf 100644
  static void setfullscreen(Client *c, int fullscreen);
 +static void setsticky(Client *c, int sticky);
  static void setlayout(const Arg *arg);
+ static void setcfact(const Arg *arg);
  static void setmfact(const Arg *arg);
- static void setup(void);
 @@ -212,6 +213,7 @@ static void tagmon(const Arg *arg);
- static void tile(Monitor *m);
+ static void tagmon(const Arg *arg);
  static void togglebar(const Arg *arg);
  static void togglefloating(const Arg *arg);
 +static void togglesticky(const Arg *arg);
@@ -131,11 +131,6 @@ index 253aba7..a9157bf 100644
  }
  
  void
-@@ -2147,3 +2183,4 @@ main(int argc, char *argv[])
- 	XCloseDisplay(dpy);
- 	return EXIT_SUCCESS;
- }
-+
 -- 
 2.38.1
 
