@@ -1,0 +1,35 @@
+From 2a599d52783a78d64074fe7a37342c29b41acdce Mon Sep 17 00:00:00 2001
+From: kumao <arturleivarx@gmail.com>
+Date: Wed, 6 Sep 2023 00:57:39 +0200
+Subject: [PATCH] apply 17-dwm-floating-statusbar-20230906.diff
+Set statusbar as floating to not interfere with window gaps
+
+---
+ dwm.c | 3 ---
+ 1 file changed, 3 deletions(-)
+
+diff --git a/dwm.c b/dwm.c
+index 04c3e47..04deb39 100644
+--- a/dwm.c
++++ b/dwm.c
+@@ -1060,7 +1060,6 @@ void
+ incnmaster(const Arg *arg)
+ {
+ 	selmon->nmaster = selmon->pertag->nmasters[selmon->pertag->curtag] = MAX(selmon->nmaster + arg->i, 0);
+-	arrange(selmon);
+ }
+ 
+ #ifdef XINERAMA
+@@ -2113,9 +2112,7 @@ updatebarpos(Monitor *m)
+ 	m->wy = m->my;
+ 	m->wh = m->mh;
+ 	if (m->showbar) {
+-		m->wh = m->wh - vertpad - bh;
+ 		m->by = m->topbar ? m->wy : m->wy + m->wh + vertpad;
+-		m->wy = m->topbar ? m->wy + bh + vp : m->wy;
+ 	} else
+ 		m->by = -bh - vp;
+ }
+-- 
+2.41.0
+
