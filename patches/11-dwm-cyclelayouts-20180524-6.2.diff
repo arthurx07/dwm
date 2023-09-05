@@ -7,9 +7,9 @@ MOD-CTRL-, and MOD-CTRL-.
 cycle backwards and forwards through available layouts.
 Probably only useful if you have a lot of additional layouts.
 The NULL, NULL layout should always be the last layout in your list,
-in order to guarantee consistent behavior.
+in order to guarantee consistent behavior. [ already applied in my case]
 ---
- config.def.h |  3 +++
+ config.def.h |  2 ++
  dwm.1        |  6 ++++++
  dwm.c        | 18 ++++++++++++++++++
  3 files changed, 27 insertions(+)
@@ -18,14 +18,6 @@ diff --git a/config.def.h b/config.def.h
 index a9ac303..153b880 100644
 --- a/config.def.h
 +++ b/config.def.h
-@@ -41,6 +41,7 @@ static const Layout layouts[] = {
- 	{ "[]=",      tile },    /* first entry is default */
- 	{ "><>",      NULL },    /* no layout function means floating behavior */
- 	{ "[M]",      monocle },
-+	{ NULL,       NULL },
- };
- 
- /* key definitions */
 @@ -76,6 +77,8 @@ static Key keys[] = {
  	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
  	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
