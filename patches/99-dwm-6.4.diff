@@ -1,5 +1,5 @@
 diff --git a/config.def.h b/config.def.h
-index 2c4207d..718d633 100644
+index 2c4207d..76eb2ca 100644
 --- a/config.def.h
 +++ b/config.def.h
 @@ -1,19 +1,22 @@
@@ -114,7 +114,7 @@ index 2c4207d..718d633 100644
  	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
  	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 -	{ MODKEY,                       XK_F5,     xrdb,           {.v = NULL } },
-+	{ MODKEY|MODKEY2,ShiftMask,     XK_r,      xrdb,           {.v = NULL } },
++	{ MODKEY|MODKEY2|ShiftMask,     XK_r,      xrdb,           {.v = NULL } },
  	TAGKEYS(                        XK_1,                      0)
  	TAGKEYS(                        XK_2,                      1)
  	TAGKEYS(                        XK_3,                      2)
