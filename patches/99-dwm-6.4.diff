@@ -45,7 +45,7 @@ index 2c4207d..8e04dd3 100644
 +	{ "System-config-printer.py", NULL, NULL, 0,        1,           -1 },
 +	{ "st-256color", NULL, "pomo",        0,            1,           -1 },
 +	{ "qpwgraph", "qpwgraph", NULL,       0,            1,           -1 },
-+	{ "gnome-calculator", NULL, NULL,     0,            1,           -1 },
++	{ NULL, "qalculate-gtk", NULL,        0,            1,           -1 },
 +	{ "Gnome-sudoku", NULL, NULL,         0,            1,           -1 },
 +	{ "Gnome-mines", NULL, NULL,          0,            1,           -1 },
 +	{ NULL, NULL, "cmus-cover-art",       0,            1,           -1 },
