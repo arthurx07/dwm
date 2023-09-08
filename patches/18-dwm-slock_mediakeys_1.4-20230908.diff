@@ -1,0 +1,13 @@
+diff --git a/dwm.c b/dwm.c
+index 97b0566..1792171 100644
+--- a/dwm.c
++++ b/dwm.c
+@@ -1809,7 +1809,7 @@ setup(void)
+ 	wa.cursor = cursor[CurNormal]->cursor;
+ 	wa.event_mask = SubstructureRedirectMask|SubstructureNotifyMask
+ 		|ButtonPressMask|PointerMotionMask|EnterWindowMask
+-		|LeaveWindowMask|StructureNotifyMask|PropertyChangeMask;
++		|LeaveWindowMask|StructureNotifyMask|PropertyChangeMask|KeyPressMask;
+ 	XChangeWindowAttributes(dpy, root, CWEventMask|CWCursor, &wa);
+ 	XSelectInput(dpy, root, wa.event_mask);
+ 	grabkeys();
