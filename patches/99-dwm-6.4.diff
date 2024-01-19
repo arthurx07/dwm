@@ -99,7 +99,7 @@ index d921cb5..f0a91eb 100644
  
  #include "movestack.c"
  static const Key keys[] = {
-@@ -124,8 +164,8 @@ static const Key keys[] = {
+@@ -124,8 +164,9 @@ static const Key keys[] = {
  	{ MODKEY|ShiftMask,             XK_backslash, shiftviewclients, { .i = -1 } },
  	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
  	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
@@ -107,6 +107,7 @@ index d921cb5..f0a91eb 100644
 -	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 +	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[1]} },
 +	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[13]} },
++       { MODKEY,                       XK_a,      focusmaster,    {0} },
  	{ MODKEY|ControlMask,		XK_comma,  cyclelayout,    {.i = -1 } },
  	{ MODKEY|ControlMask,           XK_period, cyclelayout,    {.i = +1 } },
  	{ MODKEY,                       XK_space,  setlayout,      {0} },
