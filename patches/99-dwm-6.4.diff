@@ -82,19 +82,19 @@ index d921cb5..f0a91eb 100644
 +static const char *dmenucmd[] = { "dmenu_run", "-i", NULL }; /* -i for case insensitive */
  static const char *termcmd[]  = { "st", NULL };
 +/* volume */
-+static const char *upvol[] = { "/home/kumao/.local/bin/kvolume", "-i", "5", NULL };
-+static const char *upvol1[] = { "/home/kumao/.local/bin/kvolume", "-i", "1", NULL };
-+static const char *downvol[] = { "/home/kumao/.local/bin/kvolume", "-d", "5", NULL };
-+static const char *downvol1[] = { "/home/kumao/.local/bin/kvolume", "-d", "1", NULL };
-+static const char *mutevol[] = { "/home/kumao/.local/bin/kmute", NULL };
++static const char *upvol[] = { "/home/tur/.local/bin/kvolume", "-i", "5", NULL };
++static const char *upvol1[] = { "/home/tur/.local/bin/kvolume", "-i", "1", NULL };
++static const char *downvol[] = { "/home/tur/.local/bin/kvolume", "-d", "5", NULL };
++static const char *downvol1[] = { "/home/tur/.local/bin/kvolume", "-d", "1", NULL };
++static const char *mutevol[] = { "/home/tur/.local/bin/kmute", NULL };
 +/* backlight */
-+static const char *lightup[] = { "/home/kumao/.local/bin/klight", "+10%", NULL };
-+static const char *lightdown[] = { "/home/kumao/.local/bin/klight", "10%-", NULL };
-+static const char *lightupsec[] = { "/home/kumao/.local/bin/klight", "+10%", "secondary", NULL };
-+static const char *lightdownsec[] = { "/home/kumao/.local/bin/klight", "10%-", "secondary", NULL };
++static const char *lightup[] = { "/home/tur/.local/bin/klight", "+10%", NULL };
++static const char *lightdown[] = { "/home/tur/.local/bin/klight", "10%-", NULL };
++static const char *lightupsec[] = { "/home/tur/.local/bin/klight", "+10%", "secondary", NULL };
++static const char *lightdownsec[] = { "/home/tur/.local/bin/klight", "10%-", "secondary", NULL };
 +/* player */
 +static const char *aprev[] = { "/usr/bin/playerctl", "previous", NULL };
-+static const char *aplay[] = { "/home/kumao/.local/bin/play-pause", NULL };
++static const char *aplay[] = { "/home/tur/.local/bin/play-pause", NULL };
 +static const char *anext[] = { "/usr/bin/playerctl", "next", NULL };
  
  #include "movestack.c"
