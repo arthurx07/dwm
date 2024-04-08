@@ -104,7 +104,7 @@ index e5efb6a22806..e68294b6b679 100644
 +
  /* variables */
  static const char broken[] = "broken";
- static char stext[1024];
+ static char stext[256];
 @@ -269,6 +285,8 @@ static Drw *drw;
  static Monitor *mons, *selmon;
  static Window root, wmcheckwin;
