@@ -36,7 +36,7 @@ index 92c548f..4b0a2f4 100644
 -		snprintf(m->ltsymbol, sizeof m->ltsymbol, "[%d]", n);
 -	for (c = nexttiled(m->clients); c; c = nexttiled(c->next))
 -		resize(c, m->wx, m->wy, m->ww - 2 * c->bw, m->wh - 2 * c->bw, 0);
-+            if (n > 0) /* override layout symbol */
++            if (n > 0) { /* override layout symbol */
 +                snprintf(m->ltsymbol, sizeof m->ltsymbol, "[%d]", n);
 +                int newx, newy, neww, newh;
 +
@@ -59,7 +59,7 @@ index 92c548f..4b0a2f4 100644
 +                        newy = m->wy + (m->wh - (newh + 2 * c->bw)) / 2;
 +                    resize(c, newx, newy, neww, newh, 0);
 +                }
-+
++            }
  }
  
  void

@@ -1492,7 +1492,7 @@ monocle(Monitor *m)
 	for (c = m->clients; c; c = c->next)
 		if (ISVISIBLE(c))
 			n++;
-            if (n > 0) /* override layout symbol */
+            if (n > 0) { /* override layout symbol */
                 snprintf(m->ltsymbol, sizeof m->ltsymbol, "[%d]", n);
                 int newx, newy, neww, newh;
 
@@ -1515,7 +1515,7 @@ monocle(Monitor *m)
                         newy = m->wy + (m->wh - (newh + 2 * c->bw)) / 2;
                     resize(c, newx, newy, neww, newh, 0);
                 }
-
+            }
 }
 
 void
