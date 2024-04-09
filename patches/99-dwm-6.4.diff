@@ -1,5 +1,5 @@
 diff --git a/config.def.h b/config.def.h
-index a0506e3..f37f47c 100644
+index 887c139..c4e50b9 100644
 --- a/config.def.h
 +++ b/config.def.h
 @@ -1,22 +1,25 @@
@@ -40,7 +40,22 @@ index a0506e3..f37f47c 100644
  static char normbgcolor[]           = "#222222";
  static char normbordercolor[]       = "#444444";
  static char normfgcolor[]           = "#bbbbbb";
-@@ -75,9 +78,14 @@ static const Rule rules[] = {
+@@ -66,10 +69,10 @@ static char *colors[][3] = {
+ /* tagging */
+ static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+ 
+-static const unsigned int ulinepad	= 5;	/* horizontal padding between the underline and tag */
+-static const unsigned int ulinestroke	= 2;	/* thickness / height of the underline */
+-static const unsigned int ulinevoffset	= 0;	/* how far above the bottom of the bar the line should appear */
+-static const int ulineall 		= 0;	/* 1 to show underline on all tags, 0 for just the active ones */
++static const unsigned int ulinepad	= 6;	/* horizontal padding between the underline and tag */
++static const unsigned int ulinestroke	= 3;	/* thickness / height of the underline */
++static const unsigned int ulinevoffset	= 1;	/* how far above the bottom of the bar the line should appear */
++static const int ulineall 		= 1;	/* 1 to show underline on all tags, 0 for just the active ones */
+ 
+ /* Lockfile */
+ static char lockfile[] = "/tmp/dwm.lock";
+@@ -80,9 +83,14 @@ static const Rule rules[] = {
  	 *	WM_NAME(STRING) = title
  	 */
  	/* class     instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
@@ -58,7 +73,7 @@ index a0506e3..f37f47c 100644
  	{ NULL,      NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
  };
  
-@@ -94,13 +102,13 @@ static const Layout layouts[] = {
+@@ -99,13 +107,13 @@ static const Layout layouts[] = {
  	/* symbol     arrange function */
  	{ "[]=",      tile },    /* first entry is default */
  	{ "[M]",      monocle },
@@ -75,7 +90,7 @@ index a0506e3..f37f47c 100644
  	{ "---",      horizgrid },
  	{ ":::",      gaplessgrid },
  	{ "|M|",      centeredmaster },
-@@ -110,7 +118,8 @@ static const Layout layouts[] = {
+@@ -115,7 +123,8 @@ static const Layout layouts[] = {
  };
  
  /* key definitions */
@@ -85,7 +100,7 @@ index a0506e3..f37f47c 100644
  #define TAGKEYS(KEY,TAG) \
  	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
  	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
-@@ -121,8 +130,23 @@ static const Layout layouts[] = {
+@@ -126,8 +135,23 @@ static const Layout layouts[] = {
  #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
  
  /* commands */
@@ -110,7 +125,7 @@ index a0506e3..f37f47c 100644
  
  #include "movestack.c"
  static const Key keys[] = {
-@@ -163,8 +187,9 @@ static const Key keys[] = {
+@@ -168,8 +192,9 @@ static const Key keys[] = {
  	{ MODKEY|ShiftMask,             XK_backslash, shiftviewclients, { .i = -1 } },
  	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
  	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
@@ -122,7 +137,7 @@ index a0506e3..f37f47c 100644
  	{ MODKEY|ControlMask,		XK_comma,  cyclelayout,    {.i = -1 } },
  	{ MODKEY|ControlMask,           XK_period, cyclelayout,    {.i = +1 } },
  	{ MODKEY,                       XK_space,  setlayout,      {0} },
-@@ -177,7 +202,7 @@ static const Key keys[] = {
+@@ -182,7 +207,7 @@ static const Key keys[] = {
  	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
  	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
  	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
@@ -131,7 +146,7 @@ index a0506e3..f37f47c 100644
  	TAGKEYS(                        XK_1,                      0)
  	TAGKEYS(                        XK_2,                      1)
  	TAGKEYS(                        XK_3,                      2)
-@@ -189,6 +214,18 @@ static const Key keys[] = {
+@@ -194,6 +219,18 @@ static const Key keys[] = {
  	TAGKEYS(                        XK_9,                      8)
  	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
  	{ MODKEY|ControlMask|ShiftMask, XK_q,      quit,           {1} },
