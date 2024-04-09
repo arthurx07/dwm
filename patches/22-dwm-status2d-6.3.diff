@@ -28,7 +28,7 @@ index a96f33c..24b1eeb 100644
  		free(scheme[i]);
  	free(scheme);
  	XDestroyWindow(dpy, wmcheckwin);
-@@ -693,6 +694,114 @@ dirtomon(int dir)
+@@ -693,6 +694,115 @@ dirtomon(int dir)
  	return m;
  }
  
@@ -72,6 +72,7 @@ index a96f33c..24b1eeb 100644
 +
 +	w += 2; /* 1px padding on both sides */
 +	ret = x = m->ww - w;
++	x = - 2 * sp;
 +
 +	drw_setscheme(drw, scheme[LENGTH(colors)]);
 +	drw->scheme[ColFg] = scheme[SchemeNorm][ColFg];
