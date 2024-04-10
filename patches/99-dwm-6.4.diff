@@ -105,7 +105,7 @@ index 887c139..c4e50b9 100644
  
  /* commands */
 -static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbordercolor, "-sf", selfgcolor, NULL };
-+static const char *dmenucmd[] = { "dmenu_run", "-i", NULL }; /* -i for case insensitive */
++static const char *dmenucmd[] = { "dmenu_run", "-i", "-h", "20", NULL }; /* -i for case insensitive */
  static const char *termcmd[]  = { "st", NULL };
 +/* volume */
 +static const char *upvol[] = { "/home/tur/.local/bin/kvolume", "-i", "5", NULL };
