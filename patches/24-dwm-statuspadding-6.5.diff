@@ -40,9 +40,9 @@ index a96f33c..a1b8c95 100644
  	text = p;
  
 -	w += 2; /* 1px padding on both sides */
-+	w += lrpad; /* 1px padding on both sides */
++	w += lrpad; /* lrpad padding on both sides */
  	ret = x = m->ww - w;
- 	x = - 2 * sp;
+ 	x += - 2 * sp;
  
 @@ -906,7 +906,7 @@ drawstatusbar(Monitor *m, int bh, char* stext) {
  	drw->scheme[ColFg] = scheme[SchemeNorm][ColFg];
