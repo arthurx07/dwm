@@ -26,7 +26,7 @@ index a9ac303..153b880 100644
 +	{ MODKEY|ControlMask,           XK_period, cyclelayout,    {.i = +1 } },
  	{ MODKEY,                       XK_space,  setlayout,      {0} },
  	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
- 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
+ 	{ MODKEY,                       XK_s,      togglesticky,   {0} },
 diff --git a/dwm.1 b/dwm.1
 index 13b3729..165891b 100644
 --- a/dwm.1
