@@ -13,7 +13,7 @@ index 04c3e47..04deb39 100644
 --- a/dwm.c
 +++ b/dwm.c
 @@ -1956,7 +1957,6 @@ togglebar(const Arg *arg)
- 	selmon->showbar = selmon->pertag->showbars[selmon->pertag->curtag] = !selmon->showbar;
+ 	selmon->showbar = !selmon->showbar;
  	updatebarpos(selmon);
  	XMoveResizeWindow(dpy, selmon->barwin, selmon->wx + sp, selmon->by + vp, selmon->ww - 2 * sp, bh);
 -	arrange(selmon);
