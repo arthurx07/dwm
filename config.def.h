@@ -133,7 +133,8 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static const char *dmenucmd[] = { "dmenu_run", "-i", "-h", "20", NULL }; /* -i for case insensitive */
+static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-i", "-h", "20", NULL }; /* -i for case insensitive */
 static const char *termcmd[]  = { "st", NULL };
 /* volume */
 static const char *upvol[] = { "/home/tur/.local/bin/kvolume", "-i", "5", NULL };
