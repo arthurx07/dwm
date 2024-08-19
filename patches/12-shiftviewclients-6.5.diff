@@ -14,8 +14,8 @@ index 1c0b587..ad3a5fd 100644
 --- a/config.def.h
 +++ b/config.def.h
 @@ -72,6 +72,8 @@ static Key keys[] = {
- 	{ MODKEY|Mod4Mask,              XK_0,      togglegaps,     {0} },
- 	{ MODKEY|Mod4Mask|ShiftMask,    XK_0,      defaultgaps,    {0} },
+ 	{ MODKEY|Mod1Mask,              XK_0,      togglegaps,     {0} },
+ 	{ MODKEY|Mod1Mask|ShiftMask,    XK_0,      defaultgaps,    {0} },
  	{ MODKEY,                       XK_Tab,    view,           {0} },
 +	{ MODKEY|ShiftMask,             XK_Tab,       shiftviewclients, { .i = +1 } },
 +	{ MODKEY|ShiftMask,             XK_backslash, shiftviewclients, { .i = -1 } },
@@ -32,8 +32,8 @@ index 4465af1..55d5035 100644
  static void seturgent(Client *c, int urg);
 +static void shiftviewclients(const Arg *arg);
  static void showhide(Client *c);
- static void sigchld(int unused);
  static void sighup(int unused);
+ static void sigterm(int unused);
 @@ -1610,6 +1611,46 @@ seturgent(Client *c, int urg)
  	XFree(wmh);
  }
