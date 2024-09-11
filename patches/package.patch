@@ -152,7 +152,8 @@ diff -ura --new-file package.orig/config.def.h package.new/config.def.h
  static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 -static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 +static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-i", "-h", "20", NULL }; /* -i for case insensitive */
- static const char *termcmd[]  = { "st", NULL };
+-static const char *termcmd[]  = { "st", NULL };
++static const char *termcmd[]  = { "alacritty", NULL };
 +/* volume */
 +static const char *upvol[] = { "/home/tur/.local/bin/kvolume", "-i", "5", NULL };
 +static const char *upvol1[] = { "/home/tur/.local/bin/kvolume", "-i", "1", NULL };
